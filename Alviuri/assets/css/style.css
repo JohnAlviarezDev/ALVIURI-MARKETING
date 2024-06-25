@@ -457,10 +457,10 @@ pre {
   padding: 20px 30px;
   margin-bottom: 30px;
   max-width: 100%;
-  white-space: pre-wrap;
+  white-space: -o-pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
   word-wrap: break-word;
   font-size: 0.929em;
   overflow: auto;
@@ -4159,9 +4159,9 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 select {
-  appearance: none;
-  -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   background: transparent url("../images/angle.png") no-repeat scroll 95% 50%;
 }
 
@@ -4503,8 +4503,8 @@ object {
 }
 
 .preloader-icon span:last-child {
-  animation-delay: -0.8s;
   -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
 }
 
 @keyframes preloader-fx {
@@ -5714,9 +5714,9 @@ a:active {
 .paging-navigation .nav-links li.nav-previous.disabled > a,
 .paging-navigation .nav-links li.nav-next.disabled > a {
   pointer-events: none;
-  filter: alpha(opacity=60);
-  opacity: 0.6;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  opacity: 0.6;
+  filter: alpha(opacity=60);
 }
 .paging-navigation.pagination-center .nav-links {
   text-align: center;
