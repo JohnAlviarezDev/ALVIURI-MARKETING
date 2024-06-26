@@ -597,11 +597,11 @@
 			            });
 			        }
 
-			        if( $(this).find(".owl-item").length === 1 ){
-			            $(this).find(".owl-nav").css( { "opacity": 0,"pointer-events": "none"} );
-			        }
+                    if( $(this).find(".owl-item").length === 1 ){
+                        $(this).find(".owl-nav").css( { "opacity": 0,"pointer-events": "none"} );
+                    }
 
-			    });
+                });
 			}
             $('.innovation-block .btn-links-area .btn-prev').on('click', function() {
                 $innovationrCarousel.trigger('prev.owl.carousel');
@@ -612,7 +612,7 @@
 		},
         
         /* ---------------------------------------------
-		    ## Testimonial Carousel
+		## Testimonial Carousel
 		 --------------------------------------------- */
 		testimonial_carousel: function() {
             var slideMain  = $(".testimonial-slick-wrapper");
@@ -641,7 +641,7 @@
 
                 // On init
                 $(".slick-slide-item").each(function(index, el) {
-                       $(".testimonial-slick-wrapper").slick('slickAdd', "<div>" + el.innerHTML + "</div>");
+                        $(".testimonial-slick-wrapper").slick('slickAdd', "<div>" + el.innerHTML + "</div>");
                 });
                 
                 $('.testimonial-block .btn-links-area .btn-prev').on('click', function() {
@@ -656,7 +656,7 @@
 		},
         
 		/* ---------------------------------------------
-		    ## Sidebar Script
+		## Sidebar Script
 		--------------------------------------------- */
 		sidebarScript: function() {
 			if ($('.sidebar-items').length) {
@@ -674,38 +674,38 @@
                 });
             } 
 		},	
-        	
+        
 
 		/* ---------------------------------------------
-		    ## Contact Form Script
+		## Contact Form Script
 		--------------------------------------------- */
 		contactFormScript: function() {
 			$(".hg-form-email [type='submit']").each(function(){
-			    var text = $(this).text();
-			    $(this).html("").append("<span>"+ text +"</span>").prepend("<div class='status'><i class='fas fa-circle-notch fa-spin spinner'></i></div>");
+                var text = $(this).text();
+                $(this).html("").append("<span>"+ text +"</span>").prepend("<div class='status'><i class='fas fa-circle-notch fa-spin spinner'></i></div>");
 			});
 
 			$(".hg-form-email [type='submit']").on("click", function(e){
-			    var $button = $(this);
-			    var $form = $(this).closest("form");
-			    var pathToPhp = $(this).closest("form").attr("data-php-path");
-			    $form.validate({
-			        submitHandler: function() {
-			            $button.addClass("processing");
-			            $.post( pathToPhp, $form.serialize(),  function(response) {
-			                $button.addClass("done").find(".status").append(response).prop("disabled", true);
-			            });
-			            return false;
-			        }
-			    });
+                var $button = $(this);
+                var $form = $(this).closest("form");
+                var pathToPhp = $(this).closest("form").attr("data-php-path");
+                $form.validate({
+                    submitHandler: function() {
+                        $button.addClass("processing");
+                        $.post( pathToPhp, $form.serialize(),  function(response) {
+                            $button.addClass("done").find(".status").append(response).prop("disabled", true);
+                        });
+                        return false;
+                    }
+                });
 			});
 
 			$("form:not(.hg-form-email)").each(function(){
-			    $(this).validate();
+                $(this).validate();
 			});
 		},
 		/* ---------------------------------------------
-		 function initializ
+        function initializ
 		 --------------------------------------------- */
 		initializ: function() {
 			wekalaApp.scroll_top();
@@ -725,7 +725,7 @@
 		}
 	};
 	/* ---------------------------------------------
-	 Document ready function
+	Document ready function
 	 --------------------------------------------- */
 	$(function() {
 		wekalaApp.initializ();
